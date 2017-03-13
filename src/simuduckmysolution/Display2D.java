@@ -9,10 +9,11 @@ package simuduckmysolution;
  *
  * @author Aruni
  */
-public class RubberDuck extends AnyDuck implements Duck{
+public class Display2D implements DisplayProvider{
 
-    public RubberDuck(QuackingFeature quackingFeature, FlyingFeature flyingFeature, DisplayProvider displayProvider) {
-        super(quackingFeature, flyingFeature, displayProvider);
+    @Override
+    public void display() {
+        System.out.println("Display in 2D mode.");
     }
     
 }

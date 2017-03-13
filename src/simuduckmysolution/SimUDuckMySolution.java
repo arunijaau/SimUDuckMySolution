@@ -15,7 +15,12 @@ public class SimUDuckMySolution {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        Duck duck = new RubberDuck(new MuteSound(), new FlyNoWay(), new Display2D());
+        duck.performDisplay();
+        duck.performFly();
+        duck.performQuackSound();
+        duck.setFlyingFeature(new FlyWithRocketPower());
+        duck.performFly();
     }
     
 }

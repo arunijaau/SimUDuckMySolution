@@ -12,31 +12,44 @@ package simuduckmysolution;
 public abstract class AnyDuck {
     private QuackingFeature quackingFeature;
     private FlyingFeature flyingFeature;
+    private DisplayProvider displayProvider;
 
-    protected AnyDuck(QuackingFeature quackingFeature, FlyingFeature flyingFeature) {
+    protected AnyDuck(QuackingFeature quackingFeature, FlyingFeature flyingFeature, DisplayProvider displayProvider) {
         this.setQuackingFeature(quackingFeature);
         this.setFlyingFeature(flyingFeature);
+        this.setDisplayProvider(displayProvider);
     }
      
-    public void performQuackSound() {
+    public final void performQuackSound() {
         quackingFeature.quack();
     }
     
-    public void performFly() {
+    public final void performFly() {
         flyingFeature.fly();
     }
-
-    public void setQuackingFeature(QuackingFeature quackingFeature) {
+    
+    public final void performDisplay(){
+        displayProvider.display();
+    }
+    
+    public final void setQuackingFeature(QuackingFeature quackingFeature) {
         if (quackingFeature == null) {
             throw new IllegalArgumentException("Error: Quacking feature should not be null.");
         }
         this.quackingFeature = quackingFeature;
     }
     
-    public void setFlyingFeature(FlyingFeature flyingFeature) {
+    public final void setFlyingFeature(FlyingFeature flyingFeature) {
         if (flyingFeature == null) {
             throw new IllegalArgumentException("Error: Flying feature should not be null.");
         }
         this.flyingFeature = flyingFeature;
+    }
+
+    public final void setDisplayProvider(DisplayProvider displayProvider) {
+        if(displayProvider == null){
+            throw new IllegalArgumentException("Error: Display mode should not be null.");
+        }
+        this.displayProvider = displayProvider;
     }
 }

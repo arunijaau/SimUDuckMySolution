@@ -11,13 +11,8 @@ package simuduckmysolution;
  */
 public class MallardDuck extends AnyDuck implements Duck {
 
-    public MallardDuck(QuackingFeature quackingFeature, FlyingFeature flyingFeature) {
-        super(quackingFeature,flyingFeature);
-    }
-
-    @Override
-    public final void display() {
-        System.out.println("I'm a Mallard duck.");
+    public MallardDuck(QuackingFeature quackingFeature, FlyingFeature flyingFeature, DisplayProvider displayProvider) {
+        super(quackingFeature, flyingFeature, displayProvider);
     }
 
 }

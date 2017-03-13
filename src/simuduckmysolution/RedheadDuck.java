@@ -11,13 +11,8 @@ package simuduckmysolution;
  */
 public class RedheadDuck extends AnyDuck implements Duck{
   
-    public RedheadDuck(QuackingFeature quackingFeature, FlyingFeature flyingFeature) {
-        super(quackingFeature,flyingFeature);
+    public RedheadDuck(QuackingFeature quackingFeature, FlyingFeature flyingFeature, DisplayProvider displayProvider) {
+        super(quackingFeature, flyingFeature, displayProvider);
     }
     
-    @Override
-    public final void display() {
-        System.out.println("I'm a Redhead duck.");
-    }
-
 }

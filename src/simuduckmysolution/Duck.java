@@ -14,10 +14,12 @@ public interface Duck {
     
     public abstract void performFly();
     
-    public abstract void display();
+    public abstract void performDisplay();
     
     public abstract void setFlyingFeature(FlyingFeature flyingFeature);
     
     public abstract void setQuackingFeature(QuackingFeature quackingFeature);
+    
+    public abstract void setDisplayProvider(DisplayProvider displayProvider);
     
 }

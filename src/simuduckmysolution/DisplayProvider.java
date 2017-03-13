@@ -9,10 +9,7 @@ package simuduckmysolution;
  *
  * @author Aruni
  */
-public class RubberDuck extends AnyDuck implements Duck{
-
-    public RubberDuck(QuackingFeature quackingFeature, FlyingFeature flyingFeature, DisplayProvider displayProvider) {
-        super(quackingFeature, flyingFeature, displayProvider);
-    }
+public interface DisplayProvider {
     
+    public abstract void display();
 }
